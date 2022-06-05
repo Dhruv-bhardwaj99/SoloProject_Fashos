@@ -1,5 +1,128 @@
+.landingBody{
+    align-items: center;
+}
+
+
 .slides{
     width: 100%;
     height: 600px;
+    cursor: pointer;
+}
+
+.smallCat{
+    display: flex;
+    /* justify-content:space-evenly; */
+    gap: 40px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
+}
+
+.smallFlex{
+    width: 25%;
+    height: 70px;
+    display: flex;
+    border: 2px solid #d11515;
+} 
+
+.smallFlex:hover{
+    cursor: pointer;
+    background-color: azure;
+}
+
+.smallFlex > p{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.largeCat{
+    width: 95%;
+    margin-left: 3%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5%;
+}
+
+.largeFlex{
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.largeFlex:hover{
+    color: #d11515;
+    cursor: pointer;
+}
+
+.imgTrans{
+    width: 100%;
+    height: 90%;
+    /* border: 1px solid yellow; */
+    overflow: hidden;
+}
+
+.largeImg{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: 0.7s;
+}
+
+.largeImg:hover{
+    transform: scale(1.1);
+}
+
+.largeInfo{
+    font-size: 20px;
+    text-align: center;
+}
+
+.slider{
+    width: 85%;
+    margin: auto;
+    height: 300px;
+    border: 1px solid transparent;
+}
+
+.newSliders{
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+    margin-right: 10%;
+}
+
+.img1{
+    width: 100%;
+    height: 80%;
+}
+.newSliders2{
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+    margin-right: 10%;
+}
+
+.slider2{
+    width: 85%;
+    margin: auto;
+    margin-top: 5%;
+    height: 300px;
+    border: 1px solid transparent;
+}
+
+.slider_header{
+    color: #d11515;
+    font-size: 25px;
+    text-align: center;
+}
+
+.newSliders2:hover{
+    border: #d11515 1px solid;
+    cursor: pointer;
+}
+.newSliders:hover{
+    border: #d11515 1px solid;
     cursor: pointer;
 }
