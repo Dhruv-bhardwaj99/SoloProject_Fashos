@@ -234,5 +234,75 @@
         "img2": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1620_black_1.jpg",
         "img3": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1620_black_2.jpg"
       }
+    ],
+    "cartData": [
+      {
+        "arr": {
+          "id": 4,
+          "name": "FAUSTO Men's Tan High Ankle Lace Up Leather",
+          "price": 3000,
+          "shoeType": "Boots",
+          "brand": "Bata",
+          "brandImg": "https://www.fashos.com/pub/media/wysiwyg/hp_images/2019/brand_logo/bata_logo.jpg",
+          "color": "Tan",
+          "size": "40",
+          "img1": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1621_tan_1_1.jpg",
+          "img2": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1621_tan_1.jpg",
+          "img3": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1621_tan_2.jpg"
+        },
+        "quantiy": 1,
+        "id": 5
+      },
+      {
+        "arr": {
+          "id": 3,
+          "name": "FAUSTO Men's Olive Mid Top Lace Up Leather",
+          "price": 2299,
+          "shoeType": "Boots",
+          "brand": "Sparx",
+          "brandImg": "https://www.fashos.com/pub/media/wysiwyg/hp_images/2019/brand_logo/sparx.jpg",
+          "color": "Olive",
+          "size": "41",
+          "img1": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1620_olive_1_1.jpg",
+          "img2": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1620_olive_1.jpg",
+          "img3": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1620_olive_2.jpg"
+        },
+        "quantiy": 5,
+        "id": 6
+      },
+      {
+        "arr": {
+          "id": 2,
+          "name": "FAUSTO Men's Tan Suede Leather Slip On Chelsea",
+          "price": 1990,
+          "shoeType": "Boots",
+          "brand": "Bata",
+          "brandImg": "https://www.fashos.com/pub/media/wysiwyg/hp_images/2019/brand_logo/bata_logo.jpg",
+          "color": "Tan",
+          "size": "44",
+          "img1": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_3941_tan_1_2.jpg",
+          "img2": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_3941_tan_2_1.jpg",
+          "img3": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_3941_tan_3_1.jpg"
+        },
+        "quantiy": 4,
+        "id": 7
+      },
+      {
+        "arr": {
+          "id": 4,
+          "name": "FAUSTO Men's Tan High Ankle Lace Up Leather",
+          "price": 3000,
+          "shoeType": "Boots",
+          "brand": "Bata",
+          "brandImg": "https://www.fashos.com/pub/media/wysiwyg/hp_images/2019/brand_logo/bata_logo.jpg",
+          "color": "Tan",
+          "size": "40",
+          "img1": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1621_tan_1_1.jpg",
+          "img2": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1621_tan_1.jpg",
+          "img3": "https://www.fashos.com/pub/media/catalog/product/cache/6157b2cd00c2efa35321a4f1cf89a568/f/s/fst_ki-1621_tan_2.jpg"
+        },
+        "quantiy": 4,
+        "id": 8
+      }
     ]
   }
