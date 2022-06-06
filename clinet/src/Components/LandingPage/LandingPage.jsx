@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
-import styles from "styled-components"
+import styles from "styled-components";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {useDispatch, useSelector} from "react-redux";
-import axios from "axios";
-import { addData } from "../../Redux/Data/action";
+import { useDispatch, useSelector } from "react-redux";
+// import axios from "axios";
+import { fetchData } from "../../Redux/Data/action";
 import { SliderImg } from "./Slides";
 
 const small = [
@@ -64,8 +64,6 @@ const brand = [
 ];
 
 export const Home = () => {
-
-
   const Wrapper = styles.div`
       .slick-arrow{
         background-color: black;
@@ -76,34 +74,32 @@ export const Home = () => {
           display:flex;
           gap:20px
       }
-  `
+  `;
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 3
+    slidesToScroll: 3,
   };
 
-  const myData = useSelector((store) => store.data.finalData);
+  const { finalData, error, loading } = useSelector((store) => store.data);
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-      getData();
+  useEffect(() => {
+    getData();
   }, []);
 
-  const getData = () =>{
-      axios.get("http://localhost:3001/data").then(({data}) =>{
-          dispatch(addData(data));
-      });
+  const getData = () => {
+      dispatch(fetchData());
   };
 
-  console.log(myData);
+  console.log(finalData);
 
-  return (
+  return loading ? ("Loading...") : error ? ("Error Occured") : (
     <div className="langingBody">
-        <SliderImg/>
+      <SliderImg />
       <div className="smallCat">
         {small.map((e) => (
           <div className="smallFlex">
@@ -116,7 +112,7 @@ export const Home = () => {
       <div className="largeCat">
         {largeBox.map((e) => (
           <div className="largeFlex">
-            <Link to="/products">
+            <Link to="/product">
               <div className="imgTrans">
                 <img className="largeImg" src={e.url} alt="" />
               </div>
@@ -129,11 +125,11 @@ export const Home = () => {
       <Wrapper className="slider">
         <h2 className="slider_header"> NEW ARRIVALS </h2>
         <Slider {...settings}>
-          {myData.map((el) =>(
-                <div className="newSliders" key={el.id}>
-                    <img src={el.img1} className="img1" alt="product" />
-                    <p>Rs.{el.price}</p>
-                </div>
+          {finalData.map((el) => (
+            <div className="newSliders" key={el.id}>
+              <img src={el.img1} className="img1" alt="product" />
+              <p>Rs.{el.price}</p>
+            </div>
           ))}
         </Slider>
       </Wrapper>
@@ -141,11 +137,11 @@ export const Home = () => {
       <Wrapper className="slider2">
         <h2 className="slider_header"> TOP SELLING </h2>
         <Slider {...settings}>
-          {myData.map((el) =>(
-                <div className="newSliders2" key={el.id}>
-                    <img src={el.img2} className="img1" alt="product" />
-                    <p>Rs.{el.price}</p>
-                </div>
+          {finalData.map((el) => (
+            <div className="newSliders2" key={el.id}>
+              <img src={el.img2} className="img1" alt="product" />
+              <p>Rs.{el.price}</p>
+            </div>
           ))}
         </Slider>
       </Wrapper>

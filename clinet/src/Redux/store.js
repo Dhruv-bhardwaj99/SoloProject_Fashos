@@ -1,14 +1,21 @@
-import {combineReducers, legacy_createStore as createStore} from "redux"
+import {
+  combineReducers,
+  legacy_createStore as createStore,
+  applyMiddleware
+} from "redux";
 import { dataReducer } from "./Data/reducer";
-
+import thunk  from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension"; 
 
 const root = combineReducers({
-    data: dataReducer
+  data: dataReducer,
 });
 
 export const store = createStore(
-    root, 
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  root,
+  composeWithDevTools(
+    applyMiddleware(thunk),
+  )
 );
 
 console.log("inital State", store.getState());
