@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const timeout = require("connect-timeout");
 
-const Data = require("../models/data.models");
+const Shoes = require("../models/data.models");
 
 router.post("", async (req, res) => {
   try {
-    const shoes = await Data.create(req.body);
+    const shoes = await Shoes.create(req.body);
     return res.send(shoes);
   } catch (err) {
     return res.status(500).send(er.message);
@@ -14,7 +15,7 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
   try {
-    const shoes = await Data.find().lean().exec();
+    const shoes = await Shoes.find().lean().exec();
     return res.send(shoes);
   } catch (err) {
     return res.send(500).send(er.message);
@@ -23,7 +24,7 @@ router.get("", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const shoes = await Data.findById(req.params.id).lean().exec();
+    const shoes = await Shoes.findById(req.params.id).lean().exec();
     return res.send(shoes);
   } catch (err) {
     return res.status(500).send(er.message);

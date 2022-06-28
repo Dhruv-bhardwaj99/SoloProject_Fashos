@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const dataSchema = new mongoose.Schema(
+const shoesSchema = new mongoose.Schema(
   {
     id: { type: Number, required: true },
     name: { type: String, required: true },
@@ -20,4 +20,4 @@ const dataSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("data", dataSchema)
+module.exports = mongoose.model("shoes", shoesSchema)
